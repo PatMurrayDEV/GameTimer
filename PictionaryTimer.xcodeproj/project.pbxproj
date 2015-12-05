@@ -12,6 +12,9 @@
 		CD1D38281C12CB6B00A2BBE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1D38261C12CB6B00A2BBE8 /* Main.storyboard */; };
 		CD1D382A1C12CB6B00A2BBE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CD1D38291C12CB6B00A2BBE8 /* Assets.xcassets */; };
 		CD1D382D1C12CB6B00A2BBE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CD1D382B1C12CB6B00A2BBE8 /* LaunchScreen.storyboard */; };
+		CD1D38351C12CD6500A2BBE8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1D38341C12CD6500A2BBE8 /* RoundedButton.swift */; };
+		CD1D38371C12DE9D00A2BBE8 /* SecondaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1D38361C12DE9D00A2BBE8 /* SecondaryViewController.swift */; };
+		CD1D38391C12DF1000A2BBE8 /* TimerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1D38381C12DF1000A2BBE8 /* TimerObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		CD1D38291C12CB6B00A2BBE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CD1D382C1C12CB6B00A2BBE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CD1D382E1C12CB6B00A2BBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CD1D38341C12CD6500A2BBE8 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		CD1D38361C12DE9D00A2BBE8 /* SecondaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryViewController.swift; sourceTree = "<group>"; };
+		CD1D38381C12DF1000A2BBE8 /* TimerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				CD1D38221C12CB6B00A2BBE8 /* AppDelegate.swift */,
+				CD1D38381C12DF1000A2BBE8 /* TimerObject.swift */,
 				CD1D38241C12CB6B00A2BBE8 /* ViewController.swift */,
+				CD1D38361C12DE9D00A2BBE8 /* SecondaryViewController.swift */,
+				CD1D38341C12CD6500A2BBE8 /* RoundedButton.swift */,
 				CD1D38261C12CB6B00A2BBE8 /* Main.storyboard */,
 				CD1D38291C12CB6B00A2BBE8 /* Assets.xcassets */,
 				CD1D382B1C12CB6B00A2BBE8 /* LaunchScreen.storyboard */,
@@ -136,7 +145,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				CD1D38251C12CB6B00A2BBE8 /* ViewController.swift in Sources */,
+				CD1D38351C12CD6500A2BBE8 /* RoundedButton.swift in Sources */,
 				CD1D38231C12CB6B00A2BBE8 /* AppDelegate.swift in Sources */,
+				CD1D38391C12DF1000A2BBE8 /* TimerObject.swift in Sources */,
+				CD1D38371C12DE9D00A2BBE8 /* SecondaryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,6 +259,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PictionaryTimer",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PictionaryTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.patmurraydev.PictionaryTimer;
@@ -258,6 +275,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/PictionaryTimer",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = PictionaryTimer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.patmurraydev.PictionaryTimer;

@@ -8,12 +8,20 @@
 
 import UIKit
 
-class SecondaryViewController: UIViewController {
+class SecondaryViewController: UIViewController, Timer {
+    
+    // MARK: iPhone Display
+    @IBOutlet var displayTimeLabel: UILabel!
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        displayTimeLabel.font = UIFont.monospacedDigitSystemFontOfSize(180, weight: UIFontWeightRegular)
+        
+        TimerObject.sharedInstance.externalDelegate = self
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -22,14 +30,13 @@ class SecondaryViewController: UIViewController {
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    // MARK: - Timer
+    func updateTimeDisplay(string: String) {
+        displayTimeLabel.text = string;
     }
-    */
+    
+    func timerStopped() {
+        displayTimeLabel.text = "01:00:00"
+    }
 
 }
