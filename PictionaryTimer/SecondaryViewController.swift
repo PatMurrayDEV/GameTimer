@@ -8,19 +8,25 @@
 
 import UIKit
 
-class SecondaryViewController: UIViewController, Timer {
+class SecondaryViewController: UIViewController, Timer, ScoreManagerDelegate {
     
-    // MARK: iPhone Display
+    // MARK: IBOutlets
     @IBOutlet var displayTimeLabel: UILabel!
-    
-
+    @IBOutlet weak var teamANameLabel: UILabel!
+    @IBOutlet weak var teamAScoreLabel: UILabel!
+    @IBOutlet weak var teamBNameLabel: UILabel!
+    @IBOutlet weak var teamBScoreLabel: UILabel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        displayTimeLabel.font = UIFont.monospacedDigitSystemFontOfSize(180, weight: UIFontWeightRegular)
+        displayTimeLabel.font = UIFont.monospacedDigitSystemFontOfSize(190, weight: UIFontWeightRegular)
         
         TimerObject.sharedInstance.externalDelegate = self
+        ScoreManager.sharedInstance.externalDelegate = self
+        
+        teamANameLabel.text = ScoreManager.sharedInstance.teamA.teamName
+        teamBNameLabel.text = ScoreManager.sharedInstance.teamB.teamName
         
     }
 
@@ -37,6 +43,14 @@ class SecondaryViewController: UIViewController, Timer {
     
     func timerStopped() {
         displayTimeLabel.text = "01:00:00"
+    }
+    
+    // MARK: - Scores
+    func updateScores(teamAScore: Int, teamBScore: Int) {
+        teamAScoreLabel.text = "\(teamAScore)"
+        teamBScoreLabel.text = "\(teamBScore)"
+        teamANameLabel.text = ScoreManager.sharedInstance.teamA.teamName
+        teamBNameLabel.text = ScoreManager.sharedInstance.teamB.teamName
     }
 
 }

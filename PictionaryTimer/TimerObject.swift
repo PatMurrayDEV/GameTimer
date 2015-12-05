@@ -19,7 +19,7 @@ class TimerObject: NSObject {
     // MARK: Singleton
     static let sharedInstance = TimerObject()
     
-    // MARK: Delegate Varibales
+    // MARK: Delegate Variables
     var deviceDelegate: Timer?
     var externalDelegate: Timer?
     
@@ -40,7 +40,7 @@ class TimerObject: NSObject {
         let aSelector : Selector = "updateScreen"
         timer = NSTimer.scheduledTimerWithTimeInterval(0.01, target: self, selector: aSelector, userInfo: nil, repeats: true)
         startTime = NSDate.timeIntervalSinceReferenceDate()
-        endTime = startTime + 10.0;  // FIXME: Testing
+        endTime = startTime + 60.0;  // FIXME: Testing
         
     }
 

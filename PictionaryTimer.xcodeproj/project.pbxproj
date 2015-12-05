@@ -15,6 +15,8 @@
 		CD1D38351C12CD6500A2BBE8 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1D38341C12CD6500A2BBE8 /* RoundedButton.swift */; };
 		CD1D38371C12DE9D00A2BBE8 /* SecondaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1D38361C12DE9D00A2BBE8 /* SecondaryViewController.swift */; };
 		CD1D38391C12DF1000A2BBE8 /* TimerObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1D38381C12DF1000A2BBE8 /* TimerObject.swift */; };
+		CD522CAE1C1307700071467C /* ScoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD522CAD1C1307700071467C /* ScoreManager.swift */; };
+		CD522CB31C13087A0071467C /* TeamObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD522CB21C13087A0071467C /* TeamObject.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		CD1D38341C12CD6500A2BBE8 /* RoundedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 		CD1D38361C12DE9D00A2BBE8 /* SecondaryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondaryViewController.swift; sourceTree = "<group>"; };
 		CD1D38381C12DF1000A2BBE8 /* TimerObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerObject.swift; sourceTree = "<group>"; };
+		CD522CAD1C1307700071467C /* ScoreManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreManager.swift; sourceTree = "<group>"; };
+		CD522CB21C13087A0071467C /* TeamObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TeamObject.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,16 +65,42 @@
 			isa = PBXGroup;
 			children = (
 				CD1D38221C12CB6B00A2BBE8 /* AppDelegate.swift */,
-				CD1D38381C12DF1000A2BBE8 /* TimerObject.swift */,
-				CD1D38241C12CB6B00A2BBE8 /* ViewController.swift */,
-				CD1D38361C12DE9D00A2BBE8 /* SecondaryViewController.swift */,
-				CD1D38341C12CD6500A2BBE8 /* RoundedButton.swift */,
+				CD522CB01C1307900071467C /* View Controllers */,
+				CD522CAF1C13077E0071467C /* Object Model */,
+				CD522CB11C13079B0071467C /* Custom UI */,
 				CD1D38261C12CB6B00A2BBE8 /* Main.storyboard */,
 				CD1D38291C12CB6B00A2BBE8 /* Assets.xcassets */,
 				CD1D382B1C12CB6B00A2BBE8 /* LaunchScreen.storyboard */,
 				CD1D382E1C12CB6B00A2BBE8 /* Info.plist */,
 			);
 			path = PictionaryTimer;
+			sourceTree = "<group>";
+		};
+		CD522CAF1C13077E0071467C /* Object Model */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D38381C12DF1000A2BBE8 /* TimerObject.swift */,
+				CD522CAD1C1307700071467C /* ScoreManager.swift */,
+				CD522CB21C13087A0071467C /* TeamObject.swift */,
+			);
+			name = "Object Model";
+			sourceTree = "<group>";
+		};
+		CD522CB01C1307900071467C /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D38241C12CB6B00A2BBE8 /* ViewController.swift */,
+				CD1D38361C12DE9D00A2BBE8 /* SecondaryViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		CD522CB11C13079B0071467C /* Custom UI */ = {
+			isa = PBXGroup;
+			children = (
+				CD1D38341C12CD6500A2BBE8 /* RoundedButton.swift */,
+			);
+			name = "Custom UI";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,11 +174,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD522CAE1C1307700071467C /* ScoreManager.swift in Sources */,
 				CD1D38251C12CB6B00A2BBE8 /* ViewController.swift in Sources */,
 				CD1D38351C12CD6500A2BBE8 /* RoundedButton.swift in Sources */,
 				CD1D38231C12CB6B00A2BBE8 /* AppDelegate.swift in Sources */,
 				CD1D38391C12DF1000A2BBE8 /* TimerObject.swift in Sources */,
 				CD1D38371C12DE9D00A2BBE8 /* SecondaryViewController.swift in Sources */,
+				CD522CB31C13087A0071467C /* TeamObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -262,9 +294,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PictionaryTimer",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PictionaryTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.patmurraydev.PictionaryTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -278,9 +310,9 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/PictionaryTimer",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = PictionaryTimer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.patmurraydev.PictionaryTimer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -306,6 +338,7 @@
 				CD1D38331C12CB6B00A2BBE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
